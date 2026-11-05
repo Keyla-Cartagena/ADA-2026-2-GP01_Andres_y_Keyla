@@ -19,8 +19,10 @@ La solución base es un **ascenso por coordenadas con reinicios y poda guiada po
 | `notebooks/01_busqueda.ipynb` | Notebook de búsqueda: método, registro de configuraciones y precisiones, análisis de trazas, poda y validación con `oraculo.validar`. Genera `entrega.json`. |
 | `notebooks/02_evaluacion.ipynb` | Notebook de evaluación: carga `entrega.json` y la evalúa sobre `datos_prueba.json` sin editar código. |
 | `entrega.json` | Configuración entregada (grupo, semana, índices y temperatura). Se genera al ejecutar el notebook de búsqueda. |
-| `resultados/` | Evidencia de la ejecución: `evaluaciones.csv`, `registro_busqueda.json`, `poda.json`, `curva_busqueda.png`, `cache_oraculo.json.gz`. |
-| `docs/manual_tecnico.md` | Manual técnico de la solución base. |
+| `resultados/` | Evidencia de la ejecución: `evaluaciones.csv`, `registro_busqueda.json`, `derrotas.csv`, `poda.json`, `curva_busqueda.png`, `cache_oraculo.json.gz`. |
+| `docs/manual_tecnico.tex`, `docs/manual_tecnico.pdf` | Manual técnico de la solución base (fuente LaTeX y PDF compilado). |
+| `docs/informe_primera_entrega.docx` | Informe académico: formalización, prueba de NP-dureza desde 3-SAT, complejidad de muestreo y resultados. |
+| `pruebas/prueba_busqueda_simulada.py` | Prueba sin GPU de la heurística con un oráculo sintético (`python pruebas/prueba_busqueda_simulada.py`). |
 | `oraculo.py`, `ayudas.py`, `datos_visibles.json` | Archivos del curso, sin modificar ([repo original](https://github.com/DanielMelo404/Proyecto-Oraculo-AyD)). |
 | `proyecto_oraculo.ipynb` | Notebook original del curso, como referencia. |
 
