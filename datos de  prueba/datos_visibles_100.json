@@ -1,0 +1,1948 @@
+[
+ {
+  "prompt": "What are good habits for learning a new language? In your response, the letter r should appear at least 10 times. The response must contain at least 2 placeholders represented by square brackets, such as [address]. In your entire response, refrain from the use of any commas.",
+  "pregunta": "What are good habits for learning a new language?",
+  "restriccion": "In your response, the letter r should appear at least 10 times.\tThe response must contain at least 2 placeholders represented by square brackets, such as [address].\tIn your entire response, refrain from the use of any commas.",
+  "familia": "keywords:letter_frequency",
+  "ids": [
+   "keywords:letter_frequency",
+   "detectable_content:number_placeholders",
+   "punctuation:no_comma"
+  ],
+  "kwargs": [
+   {
+    "letter": "r",
+    "let_frequency": 10,
+    "let_relation": "at least"
+   },
+   {
+    "num_placeholders": 2
+   },
+   {}
+  ],
+  "split": "descartada",
+  "id": 1
+ },
+ {
+  "prompt": "Describe the city of Barcelona for a tourist guide. Answer with at least 150 words. Highlight at least 3 sections in your answer with markdown, i.e. *highlighted section*. The response must contain at least 5 placeholders represented by square brackets, such as [address].",
+  "pregunta": "Describe the city of Barcelona for a tourist guide.",
+  "restriccion": "Answer with at least 150 words.\tHighlight at least 3 sections in your answer with markdown, i.e. *highlighted section*.\tThe response must contain at least 5 placeholders represented by square brackets, such as [address].",
+  "familia": "length_constraints:number_words",
+  "ids": [
+   "length_constraints:number_words",
+   "detectable_format:number_highlighted_sections",
+   "detectable_content:number_placeholders"
+  ],
+  "kwargs": [
+   {
+    "num_words": 150,
+    "relation": "at least"
+   },
+   {
+    "num_highlights": 3
+   },
+   {
+    "num_placeholders": 5
+   }
+  ],
+  "split": "validacion",
+  "id": 2
+ },
+ {
+  "prompt": "Explica que es la fotosintesis en palabras sencillas. In your entire response, refrain from the use of any commas. Highlight at least 3 sections in your answer with markdown, i.e. *highlighted section*. Include keywords ['ribbon', 'pencil', 'engine', 'anchor'] in the response.",
+  "pregunta": "Explica que es la fotosintesis en palabras sencillas.",
+  "restriccion": "In your entire response, refrain from the use of any commas.\tHighlight at least 3 sections in your answer with markdown, i.e. *highlighted section*.\tInclude keywords ['ribbon', 'pencil', 'engine', 'anchor'] in the response.",
+  "familia": "punctuation:no_comma",
+  "ids": [
+   "punctuation:no_comma",
+   "detectable_format:number_highlighted_sections",
+   "keywords:existence"
+  ],
+  "kwargs": [
+   {},
+   {
+    "num_highlights": 3
+   },
+   {
+    "keywords": [
+     "ribbon",
+     "pencil",
+     "engine",
+     "anchor"
+    ]
+   }
+  ],
+  "split": "validacion",
+  "id": 3
+ },
+ {
+  "prompt": "Write a short story about a lighthouse keeper who finds a mysterious bottle. Your response should contain at least 8 sentences. Include keyword window in your response. Wrap your entire response with double quotation marks.",
+  "pregunta": "Write a short story about a lighthouse keeper who finds a mysterious bottle.",
+  "restriccion": "Your response should contain at least 8 sentences.\tInclude keyword window in your response.\tWrap your entire response with double quotation marks.",
+  "familia": "length_constraints:number_sentences",
+  "ids": [
+   "length_constraints:number_sentences",
+   "keywords:word_once",
+   "startend:quotation"
+  ],
+  "kwargs": [
+   {
+    "num_sentences": 8,
+    "relation": "at least"
+   },
+   {
+    "keyword": "window"
+   },
+   {}
+  ],
+  "split": "descartada",
+  "id": 4
+ },
+ {
+  "prompt": "Explain why the sky is blue. In your response, the word balance should appear at least 4 times. Highlight at least 4 sections in your answer with markdown, i.e. *highlighted section*. Your response must have 4 sections. Mark the beginning of each section with SECTION X, such as:\nSECTION 1\n[content of section 1]\nSECTION 2\n[content of section 2]",
+  "pregunta": "Explain why the sky is blue.",
+  "restriccion": "In your response, the word balance should appear at least 4 times.\tHighlight at least 4 sections in your answer with markdown, i.e. *highlighted section*.\tYour response must have 4 sections. Mark the beginning of each section with SECTION X, such as:\nSECTION 1\n[content of section 1]\nSECTION 2\n[content of section 2]",
+  "familia": "keywords:frequency",
+  "ids": [
+   "keywords:frequency",
+   "detectable_format:number_highlighted_sections",
+   "detectable_format:multiple_sections"
+  ],
+  "kwargs": [
+   {
+    "keyword": "balance",
+    "frequency": 4,
+    "relation": "at least"
+   },
+   {
+    "num_highlights": 4
+   },
+   {
+    "section_spliter": "SECTION",
+    "num_sections": 4
+   }
+  ],
+  "split": "busqueda",
+  "id": 5
+ },
+ {
+  "prompt": "Explain the concept of supply and demand. At the end of your response, please explicitly add a postscript starting with Postscript: The response must contain at least 3 placeholders represented by square brackets, such as [address].",
+  "pregunta": "Explain the concept of supply and demand.",
+  "restriccion": "At the end of your response, please explicitly add a postscript starting with Postscript:\tThe response must contain at least 3 placeholders represented by square brackets, such as [address].",
+  "familia": "detectable_content:postscript",
+  "ids": [
+   "detectable_content:postscript",
+   "detectable_content:number_placeholders"
+  ],
+  "kwargs": [
+   {
+    "postscript_marker": "Postscript:"
+   },
+   {
+    "num_placeholders": 3
+   }
+  ],
+  "split": "busqueda",
+  "id": 6
+ },
+ {
+  "prompt": "Describe the history of the bicycle. In your response, the letter e should appear at least 5 times. There should be 2 paragraphs. Paragraphs and only paragraphs are separated with each other by two new lines as if it was '\\n\\n' in python. Paragraph 2 must start with word First.",
+  "pregunta": "Describe the history of the bicycle.",
+  "restriccion": "In your response, the letter e should appear at least 5 times.\tThere should be 2 paragraphs. Paragraphs and only paragraphs are separated with each other by two new lines as if it was '\\n\\n' in python. Paragraph 2 must start with word First.",
+  "familia": "keywords:letter_frequency",
+  "ids": [
+   "keywords:letter_frequency",
+   "length_constraints:nth_paragraph_first_word"
+  ],
+  "kwargs": [
+   {
+    "letter": "e",
+    "let_frequency": 5,
+    "let_relation": "at least"
+   },
+   {
+    "num_paragraphs": 2,
+    "nth_paragraph": 2,
+    "first_word": "First"
+   }
+  ],
+  "split": "descartada",
+  "id": 7
+ },
+ {
+  "prompt": "Describe how a bill becomes a law in a parliamentary system. Answer with less than 400 words. Your answer must contain a title, wrapped in double angular brackets, such as <<poem of joy>>.",
+  "pregunta": "Describe how a bill becomes a law in a parliamentary system.",
+  "restriccion": "Answer with less than 400 words.\tYour answer must contain a title, wrapped in double angular brackets, such as <<poem of joy>>.",
+  "familia": "length_constraints:number_words",
+  "ids": [
+   "length_constraints:number_words",
+   "detectable_format:title"
+  ],
+  "kwargs": [
+   {
+    "num_words": 400,
+    "relation": "less than"
+   },
+   {}
+  ],
+  "split": "descartada",
+  "id": 8
+ },
+ {
+  "prompt": "Summarize the plot of Romeo and Juliet. In your response, words with all capital letters should appear at least 8 times. The last word of your response should be the word everything.",
+  "pregunta": "Summarize the plot of Romeo and Juliet.",
+  "restriccion": "In your response, words with all capital letters should appear at least 8 times.\tThe last word of your response should be the word everything.",
+  "familia": "change_case:capital_word_frequency",
+  "ids": [
+   "change_case:capital_word_frequency",
+   "last_word:last_word_answer"
+  ],
+  "kwargs": [
+   {
+    "capital_frequency": 8,
+    "capital_relation": "at least"
+   },
+   {
+    "last_word": "everything"
+   }
+  ],
+  "split": "busqueda",
+  "id": 9
+ },
+ {
+  "prompt": "What are the benefits of regular exercise? There should be 2 paragraphs. Paragraphs are separated with the markdown divider: *** Highlight at least 3 sections in your answer with markdown, i.e. *highlighted section*.",
+  "pregunta": "What are the benefits of regular exercise?",
+  "restriccion": "There should be 2 paragraphs. Paragraphs are separated with the markdown divider: ***\tHighlight at least 3 sections in your answer with markdown, i.e. *highlighted section*.",
+  "familia": "paragraphs:paragraphs",
+  "ids": [
+   "paragraphs:paragraphs",
+   "detectable_format:number_highlighted_sections"
+  ],
+  "kwargs": [
+   {},
+   {
+    "num_highlights": 3
+   }
+  ],
+  "split": "validacion",
+  "id": 10
+ },
+ {
+  "prompt": "Compare electric cars and gasoline cars. In your response, the word rhythm should appear less than 3 times. Your entire response should be in English, and in all capital letters.",
+  "pregunta": "Compare electric cars and gasoline cars.",
+  "restriccion": "In your response, the word rhythm should appear less than 3 times.\tYour entire response should be in English, and in all capital letters.",
+  "familia": "keywords:frequency",
+  "ids": [
+   "keywords:frequency",
+   "change_case:english_capital"
+  ],
+  "kwargs": [
+   {
+    "keyword": "rhythm",
+    "frequency": 3,
+    "relation": "less than"
+   },
+   {}
+  ],
+  "split": "descartada",
+  "id": 11
+ },
+ {
+  "prompt": "Give advice to a student who is preparing for a final exam. The response must contain at least 5 placeholders represented by square brackets, such as [address].",
+  "pregunta": "Give advice to a student who is preparing for a final exam.",
+  "restriccion": "The response must contain at least 5 placeholders represented by square brackets, such as [address].",
+  "familia": "detectable_content:number_placeholders",
+  "ids": [
+   "detectable_content:number_placeholders"
+  ],
+  "kwargs": [
+   {
+    "num_placeholders": 5
+   }
+  ],
+  "split": "busqueda",
+  "id": 12
+ },
+ {
+  "prompt": "Que recomendaciones darias para preparar una presentacion en publico? There should be 3 paragraphs. Paragraphs are separated with the markdown divider: ***",
+  "pregunta": "Que recomendaciones darias para preparar una presentacion en publico?",
+  "restriccion": "There should be 3 paragraphs. Paragraphs are separated with the markdown divider: ***",
+  "familia": "length_constraints:number_paragraphs",
+  "ids": [
+   "length_constraints:number_paragraphs"
+  ],
+  "kwargs": [
+   {
+    "num_paragraphs": 3
+   }
+  ],
+  "split": "busqueda",
+  "id": 13
+ },
+ {
+  "prompt": "Write a poem about autumn rain in the city. In your response, the word rhythm should appear less than 2 times. Your entire response should be in English, and in all capital letters.",
+  "pregunta": "Write a poem about autumn rain in the city.",
+  "restriccion": "In your response, the word rhythm should appear less than 2 times.\tYour entire response should be in English, and in all capital letters.",
+  "familia": "keywords:frequency",
+  "ids": [
+   "keywords:frequency",
+   "change_case:english_capital"
+  ],
+  "kwargs": [
+   {
+    "keyword": "rhythm",
+    "frequency": 2,
+    "relation": "less than"
+   },
+   {}
+  ],
+  "split": "busqueda",
+  "id": 14
+ },
+ {
+  "prompt": "How can a small business improve its customer service? The last word of your response should be the word clear.",
+  "pregunta": "How can a small business improve its customer service?",
+  "restriccion": "The last word of your response should be the word clear.",
+  "familia": "last_word:last_word_answer",
+  "ids": [
+   "last_word:last_word_answer"
+  ],
+  "kwargs": [
+   {
+    "last_word": "clear"
+   }
+  ],
+  "split": "busqueda",
+  "id": 15
+ },
+ {
+  "prompt": "Write a motivational message for a team that just finished a hard project. Your answer must contain a title, wrapped in double angular brackets, such as <<poem of joy>>. In your response, the letter e should appear less than 100 times. The last word of your response should be the word clear.",
+  "pregunta": "Write a motivational message for a team that just finished a hard project.",
+  "restriccion": "Your answer must contain a title, wrapped in double angular brackets, such as <<poem of joy>>.\tIn your response, the letter e should appear less than 100 times.\tThe last word of your response should be the word clear.",
+  "familia": "detectable_format:title",
+  "ids": [
+   "detectable_format:title",
+   "keywords:letter_frequency",
+   "last_word:last_word_answer"
+  ],
+  "kwargs": [
+   {},
+   {
+    "letter": "e",
+    "let_frequency": 100,
+    "let_relation": "less than"
+   },
+   {
+    "last_word": "clear"
+   }
+  ],
+  "split": "validacion",
+  "id": 16
+ },
+ {
+  "prompt": "Explain how vaccines train the immune system. Answer with less than 400 words.",
+  "pregunta": "Explain how vaccines train the immune system.",
+  "restriccion": "Answer with less than 400 words.",
+  "familia": "length_constraints:number_words",
+  "ids": [
+   "length_constraints:number_words"
+  ],
+  "kwargs": [
+   {
+    "num_words": 400,
+    "relation": "less than"
+   }
+  ],
+  "split": "busqueda",
+  "id": 17
+ },
+ {
+  "prompt": "Describe el ciclo del agua para un nino de diez anos. The response must contain at least 4 placeholders represented by square brackets, such as [address]. Your entire response should be in English, and in all lowercase letters. No capital letters are allowed.",
+  "pregunta": "Describe el ciclo del agua para un nino de diez anos.",
+  "restriccion": "The response must contain at least 4 placeholders represented by square brackets, such as [address].\tYour entire response should be in English, and in all lowercase letters. No capital letters are allowed.",
+  "familia": "detectable_content:number_placeholders",
+  "ids": [
+   "detectable_content:number_placeholders",
+   "change_case:english_lowercase"
+  ],
+  "kwargs": [
+   {
+    "num_placeholders": 4
+   },
+   {}
+  ],
+  "split": "descartada",
+  "id": 18
+ },
+ {
+  "prompt": "Escribe un correo formal para pedir informacion sobre un curso de programacion. In your entire response, refrain from the use of any commas. Answer with less than 150 words. The response must contain at least 2 placeholders represented by square brackets, such as [address].",
+  "pregunta": "Escribe un correo formal para pedir informacion sobre un curso de programacion.",
+  "restriccion": "In your entire response, refrain from the use of any commas.\tAnswer with less than 150 words.\tThe response must contain at least 2 placeholders represented by square brackets, such as [address].",
+  "familia": "punctuation:no_comma",
+  "ids": [
+   "punctuation:no_comma",
+   "length_constraints:number_words",
+   "detectable_content:number_placeholders"
+  ],
+  "kwargs": [
+   {},
+   {
+    "num_words": 150,
+    "relation": "less than"
+   },
+   {
+    "num_placeholders": 2
+   }
+  ],
+  "split": "descartada",
+  "id": 19
+ },
+ {
+  "prompt": "What should I consider when adopting a dog? Your response should contain at least 4 sentences.",
+  "pregunta": "What should I consider when adopting a dog?",
+  "restriccion": "Your response should contain at least 4 sentences.",
+  "familia": "length_constraints:number_sentences",
+  "ids": [
+   "length_constraints:number_sentences"
+  ],
+  "kwargs": [
+   {
+    "num_sentences": 4,
+    "relation": "at least"
+   }
+  ],
+  "split": "validacion",
+  "id": 20
+ },
+ {
+  "prompt": "A train travels 180 km in 3 hours. What is its average speed in km/h? Highlight at least 2 sections in your answer with markdown, i.e. *highlighted section*. The last word of your response should be the word finished. Include keywords ['signal', 'lantern', 'planet', 'castle'] in the response.",
+  "pregunta": "A train travels 180 km in 3 hours. What is its average speed in km/h?",
+  "restriccion": "Highlight at least 2 sections in your answer with markdown, i.e. *highlighted section*.\tThe last word of your response should be the word finished.\tInclude keywords ['signal', 'lantern', 'planet', 'castle'] in the response.",
+  "familia": "detectable_format:number_highlighted_sections",
+  "ids": [
+   "detectable_format:number_highlighted_sections",
+   "last_word:last_word_answer",
+   "keywords:existence"
+  ],
+  "kwargs": [
+   {
+    "num_highlights": 2
+   },
+   {
+    "last_word": "finished"
+   },
+   {
+    "keywords": [
+     "signal",
+     "lantern",
+     "planet",
+     "castle"
+    ]
+   }
+  ],
+  "split": "validacion",
+  "id": 21
+ },
+ {
+  "prompt": "What is the Pythagorean theorem and how is it used? Entire output should be wrapped in JSON format. You can use markdown ticks such as ```.",
+  "pregunta": "What is the Pythagorean theorem and how is it used?",
+  "restriccion": "Entire output should be wrapped in JSON format. You can use markdown ticks such as ```.",
+  "familia": "detectable_format:json_format",
+  "ids": [
+   "detectable_format:json_format"
+  ],
+  "kwargs": [
+   {}
+  ],
+  "split": "busqueda",
+  "id": 22
+ },
+ {
+  "prompt": "Explain the difference between a list and a tuple in Python. Include keyword meadow in your response. Highlight at least 3 sections in your answer with markdown, i.e. *highlighted section*.",
+  "pregunta": "Explain the difference between a list and a tuple in Python.",
+  "restriccion": "Include keyword meadow in your response.\tHighlight at least 3 sections in your answer with markdown, i.e. *highlighted section*.",
+  "familia": "keywords:word_once",
+  "ids": [
+   "keywords:word_once",
+   "detectable_format:number_highlighted_sections"
+  ],
+  "kwargs": [
+   {
+    "keyword": "meadow"
+   },
+   {
+    "num_highlights": 3
+   }
+  ],
+  "split": "busqueda",
+  "id": 23
+ },
+ {
+  "prompt": "Give tips for staying focused while working from home. Your entire response should be in English, and in all capital letters. Include keyword market in your response.",
+  "pregunta": "Give tips for staying focused while working from home.",
+  "restriccion": "Your entire response should be in English, and in all capital letters.\tInclude keyword market in your response.",
+  "familia": "change_case:english_capital",
+  "ids": [
+   "change_case:english_capital",
+   "keywords:word_once"
+  ],
+  "kwargs": [
+   {},
+   {
+    "keyword": "market"
+   }
+  ],
+  "split": "busqueda",
+  "id": 24
+ },
+ {
+  "prompt": "Explain what inflation is and how it affects savings. Highlight at least 2 sections in your answer with markdown, i.e. *highlighted section*. There should be 4 paragraphs. Paragraphs are separated with the markdown divider: ***",
+  "pregunta": "Explain what inflation is and how it affects savings.",
+  "restriccion": "Highlight at least 2 sections in your answer with markdown, i.e. *highlighted section*.\tThere should be 4 paragraphs. Paragraphs are separated with the markdown divider: ***",
+  "familia": "detectable_format:number_highlighted_sections",
+  "ids": [
+   "detectable_format:number_highlighted_sections",
+   "length_constraints:number_paragraphs"
+  ],
+  "kwargs": [
+   {
+    "num_highlights": 2
+   },
+   {
+    "num_paragraphs": 4
+   }
+  ],
+  "split": "busqueda",
+  "id": 25
+ },
+ {
+  "prompt": "Explica la diferencia entre clima y tiempo atmosferico. In your entire response, refrain from the use of any commas. Your response must have 3 sections. Mark the beginning of each section with Paragraph X, such as:\nParagraph 1\n[content of section 1]\nParagraph 2\n[content of section 2] In your response, the letter a should appear less than 60 times.",
+  "pregunta": "Explica la diferencia entre clima y tiempo atmosferico.",
+  "restriccion": "In your entire response, refrain from the use of any commas.\tYour response must have 3 sections. Mark the beginning of each section with Paragraph X, such as:\nParagraph 1\n[content of section 1]\nParagraph 2\n[content of section 2]\tIn your response, the letter a should appear less than 60 times.",
+  "familia": "punctuation:no_comma",
+  "ids": [
+   "punctuation:no_comma",
+   "detectable_format:multiple_sections",
+   "keywords:letter_frequency"
+  ],
+  "kwargs": [
+   {},
+   {
+    "section_spliter": "Paragraph",
+    "num_sections": 3
+   },
+   {
+    "letter": "a",
+    "let_frequency": 60,
+    "let_relation": "less than"
+   }
+  ],
+  "split": "descartada",
+  "id": 26
+ },
+ {
+  "prompt": "Explain how photosynthesis works. Include keywords ['silver', 'compass', 'meadow', 'rhythm'] in the response.",
+  "pregunta": "Explain how photosynthesis works.",
+  "restriccion": "Include keywords ['silver', 'compass', 'meadow', 'rhythm'] in the response.",
+  "familia": "keywords:existence",
+  "ids": [
+   "keywords:existence"
+  ],
+  "kwargs": [
+   {
+    "keywords": [
+     "silver",
+     "compass",
+     "meadow",
+     "rhythm"
+    ]
+   }
+  ],
+  "split": "busqueda",
+  "id": 27
+ },
+ {
+  "prompt": "Write a cover letter for a junior data analyst position. Your response should contain less than 12 sentences. Include keywords ['rhythm', 'journey'] in the response.",
+  "pregunta": "Write a cover letter for a junior data analyst position.",
+  "restriccion": "Your response should contain less than 12 sentences.\tInclude keywords ['rhythm', 'journey'] in the response.",
+  "familia": "length_constraints:number_sentences",
+  "ids": [
+   "length_constraints:number_sentences",
+   "keywords:existence"
+  ],
+  "kwargs": [
+   {
+    "num_sentences": 12,
+    "relation": "less than"
+   },
+   {
+    "keywords": [
+     "rhythm",
+     "journey"
+    ]
+   }
+  ],
+  "split": "validacion",
+  "id": 28
+ },
+ {
+  "prompt": "Write a SQL query that returns the ten most expensive products from a table named products. In your entire response, refrain from the use of any commas.",
+  "pregunta": "Write a SQL query that returns the ten most expensive products from a table named products.",
+  "restriccion": "In your entire response, refrain from the use of any commas.",
+  "familia": "punctuation:no_comma",
+  "ids": [
+   "punctuation:no_comma"
+  ],
+  "kwargs": [
+   {}
+  ],
+  "split": "busqueda",
+  "id": 29
+ },
+ {
+  "prompt": "Resume la historia de la independencia de Colombia. Finish your response with this exact phrase Any other questions?. No other words should follow this phrase. Include keywords ['puzzle', 'window', 'mirror'] in the response.",
+  "pregunta": "Resume la historia de la independencia de Colombia.",
+  "restriccion": "Finish your response with this exact phrase Any other questions?. No other words should follow this phrase.\tInclude keywords ['puzzle', 'window', 'mirror'] in the response.",
+  "familia": "startend:end_checker",
+  "ids": [
+   "startend:end_checker",
+   "keywords:existence"
+  ],
+  "kwargs": [
+   {
+    "end_phrase": "Any other questions?"
+   },
+   {
+    "keywords": [
+     "puzzle",
+     "window",
+     "mirror"
+    ]
+   }
+  ],
+  "split": "validacion",
+  "id": 30
+ },
+ {
+  "prompt": "Dame consejos para ahorrar dinero cada mes. In your response, the letter a should appear at least 15 times. Your response should contain at least 5 sentences.",
+  "pregunta": "Dame consejos para ahorrar dinero cada mes.",
+  "restriccion": "In your response, the letter a should appear at least 15 times.\tYour response should contain at least 5 sentences.",
+  "familia": "keywords:letter_frequency",
+  "ids": [
+   "keywords:letter_frequency",
+   "length_constraints:number_sentences"
+  ],
+  "kwargs": [
+   {
+    "letter": "a",
+    "let_frequency": 15,
+    "let_relation": "at least"
+   },
+   {
+    "num_sentences": 5,
+    "relation": "at least"
+   }
+  ],
+  "split": "descartada",
+  "id": 31
+ },
+ {
+  "prompt": "Un rectangulo mide 12 metros de largo y 5 de ancho. Cual es su area? Your response should contain at least 8 sentences.",
+  "pregunta": "Un rectangulo mide 12 metros de largo y 5 de ancho. Cual es su area?",
+  "restriccion": "Your response should contain at least 8 sentences.",
+  "familia": "length_constraints:number_sentences",
+  "ids": [
+   "length_constraints:number_sentences"
+  ],
+  "kwargs": [
+   {
+    "num_sentences": 8,
+    "relation": "at least"
+   }
+  ],
+  "split": "validacion",
+  "id": 32
+ },
+ {
+  "prompt": "Escribe una funcion en Python que cuente las vocales de un texto. The response must contain at least 4 placeholders represented by square brackets, such as [address]. In your entire response, refrain from the use of any commas.",
+  "pregunta": "Escribe una funcion en Python que cuente las vocales de un texto.",
+  "restriccion": "The response must contain at least 4 placeholders represented by square brackets, such as [address].\tIn your entire response, refrain from the use of any commas.",
+  "familia": "detectable_content:number_placeholders",
+  "ids": [
+   "detectable_content:number_placeholders",
+   "punctuation:no_comma"
+  ],
+  "kwargs": [
+   {
+    "num_placeholders": 4
+   },
+   {}
+  ],
+  "split": "busqueda",
+  "id": 33
+ },
+ {
+  "prompt": "Describe the main causes of the French Revolution. Highlight at least 5 sections in your answer with markdown, i.e. *highlighted section*. In your response, the letter t should appear at least 8 times.",
+  "pregunta": "Describe the main causes of the French Revolution.",
+  "restriccion": "Highlight at least 5 sections in your answer with markdown, i.e. *highlighted section*.\tIn your response, the letter t should appear at least 8 times.",
+  "familia": "detectable_format:number_highlighted_sections",
+  "ids": [
+   "detectable_format:number_highlighted_sections",
+   "keywords:letter_frequency"
+  ],
+  "kwargs": [
+   {
+    "num_highlights": 5
+   },
+   {
+    "letter": "t",
+    "let_frequency": 8,
+    "let_relation": "at least"
+   }
+  ],
+  "split": "descartada",
+  "id": 34
+ },
+ {
+  "prompt": "Write a JavaScript function that reverses a string. In your response, the letter a should appear less than 80 times. Highlight at least 5 sections in your answer with markdown, i.e. *highlighted section*.",
+  "pregunta": "Write a JavaScript function that reverses a string.",
+  "restriccion": "In your response, the letter a should appear less than 80 times.\tHighlight at least 5 sections in your answer with markdown, i.e. *highlighted section*.",
+  "familia": "keywords:letter_frequency",
+  "ids": [
+   "keywords:letter_frequency",
+   "detectable_format:number_highlighted_sections"
+  ],
+  "kwargs": [
+   {
+    "letter": "a",
+    "let_frequency": 80,
+    "let_relation": "less than"
+   },
+   {
+    "num_highlights": 5
+   }
+  ],
+  "split": "busqueda",
+  "id": 35
+ },
+ {
+  "prompt": "Explain what an API is to a beginner. Your answer must contain a title, wrapped in double angular brackets, such as <<poem of joy>>.",
+  "pregunta": "Explain what an API is to a beginner.",
+  "restriccion": "Your answer must contain a title, wrapped in double angular brackets, such as <<poem of joy>>.",
+  "familia": "detectable_format:title",
+  "ids": [
+   "detectable_format:title"
+  ],
+  "kwargs": [
+   {}
+  ],
+  "split": "validacion",
+  "id": 36
+ },
+ {
+  "prompt": "Explain how to make a good first impression at a job interview. Include keyword pencil in your response.",
+  "pregunta": "Explain how to make a good first impression at a job interview.",
+  "restriccion": "Include keyword pencil in your response.",
+  "familia": "keywords:word_once",
+  "ids": [
+   "keywords:word_once"
+  ],
+  "kwargs": [
+   {
+    "keyword": "pencil"
+   }
+  ],
+  "split": "descartada",
+  "id": 37
+ },
+ {
+  "prompt": "Write a short product description for a reusable water bottle. There should be 2 paragraphs. Paragraphs are separated with the markdown divider: *** Your answer must contain a title, wrapped in double angular brackets, such as <<poem of joy>>.",
+  "pregunta": "Write a short product description for a reusable water bottle.",
+  "restriccion": "There should be 2 paragraphs. Paragraphs are separated with the markdown divider: ***\tYour answer must contain a title, wrapped in double angular brackets, such as <<poem of joy>>.",
+  "familia": "paragraphs:paragraphs",
+  "ids": [
+   "paragraphs:paragraphs",
+   "detectable_format:title"
+  ],
+  "kwargs": [
+   {},
+   {}
+  ],
+  "split": "descartada",
+  "id": 38
+ },
+ {
+  "prompt": "Describe how to prepare a simple vegetable soup. The first word of your response should be the word imagine. In your response, words with all capital letters should appear at least 5 times.",
+  "pregunta": "Describe how to prepare a simple vegetable soup.",
+  "restriccion": "The first word of your response should be the word imagine.\tIn your response, words with all capital letters should appear at least 5 times.",
+  "familia": "first_word:first_word_answer",
+  "ids": [
+   "first_word:first_word_answer",
+   "change_case:capital_word_frequency"
+  ],
+  "kwargs": [
+   {
+    "first_word": "imagine"
+   },
+   {
+    "capital_frequency": 5,
+    "capital_relation": "at least"
+   }
+  ],
+  "split": "descartada",
+  "id": 39
+ },
+ {
+  "prompt": "Maria has 24 apples and gives away a third of them. How many apples does she have left? In your response, the letter r should appear less than 80 times. The last word of your response should be the word enough.",
+  "pregunta": "Maria has 24 apples and gives away a third of them. How many apples does she have left?",
+  "restriccion": "In your response, the letter r should appear less than 80 times.\tThe last word of your response should be the word enough.",
+  "familia": "keywords:letter_frequency",
+  "ids": [
+   "keywords:letter_frequency",
+   "last_word:last_word_answer"
+  ],
+  "kwargs": [
+   {
+    "letter": "r",
+    "let_frequency": 80,
+    "let_relation": "less than"
+   },
+   {
+    "last_word": "enough"
+   }
+  ],
+  "split": "busqueda",
+  "id": 40
+ },
+ {
+  "prompt": "Explain what machine learning is. Highlight at least 4 sections in your answer with markdown, i.e. *highlighted section*. The response must contain at least 2 placeholders represented by square brackets, such as [address].",
+  "pregunta": "Explain what machine learning is.",
+  "restriccion": "Highlight at least 4 sections in your answer with markdown, i.e. *highlighted section*.\tThe response must contain at least 2 placeholders represented by square brackets, such as [address].",
+  "familia": "detectable_format:number_highlighted_sections",
+  "ids": [
+   "detectable_format:number_highlighted_sections",
+   "detectable_content:number_placeholders"
+  ],
+  "kwargs": [
+   {
+    "num_highlights": 4
+   },
+   {
+    "num_placeholders": 2
+   }
+  ],
+  "split": "validacion",
+  "id": 41
+ },
+ {
+  "prompt": "Describe the water cycle. Your answer must contain exactly 3 bullet points. Use the markdown bullet points such as:\n* This is point 1. \n* This is point 2",
+  "pregunta": "Describe the water cycle.",
+  "restriccion": "Your answer must contain exactly 3 bullet points. Use the markdown bullet points such as:\n* This is point 1. \n* This is point 2",
+  "familia": "detectable_format:number_bullet_lists",
+  "ids": [
+   "detectable_format:number_bullet_lists"
+  ],
+  "kwargs": [
+   {
+    "num_bullets": 3
+   }
+  ],
+  "split": "descartada",
+  "id": 42
+ },
+ {
+  "prompt": "Write a python function to check whether a number is prime. In your response, the letter a should appear less than 100 times. Your response should contain less than 12 sentences. Your answer must contain exactly 2 bullet points. Use the markdown bullet points such as:\n* This is point 1. \n* This is point 2",
+  "pregunta": "Write a python function to check whether a number is prime.",
+  "restriccion": "In your response, the letter a should appear less than 100 times.\tYour response should contain less than 12 sentences.\tYour answer must contain exactly 2 bullet points. Use the markdown bullet points such as:\n* This is point 1. \n* This is point 2",
+  "familia": "keywords:letter_frequency",
+  "ids": [
+   "keywords:letter_frequency",
+   "length_constraints:number_sentences",
+   "detectable_format:number_bullet_lists"
+  ],
+  "kwargs": [
+   {
+    "letter": "a",
+    "let_frequency": 100,
+    "let_relation": "less than"
+   },
+   {
+    "num_sentences": 12,
+    "relation": "less than"
+   },
+   {
+    "num_bullets": 2
+   }
+  ],
+  "split": "validacion",
+  "id": 43
+ },
+ {
+  "prompt": "What is the difference between weather and climate? Answer with at least 120 words.",
+  "pregunta": "What is the difference between weather and climate?",
+  "restriccion": "Answer with at least 120 words.",
+  "familia": "length_constraints:number_words",
+  "ids": [
+   "length_constraints:number_words"
+  ],
+  "kwargs": [
+   {
+    "num_words": 120,
+    "relation": "at least"
+   }
+  ],
+  "split": "busqueda",
+  "id": 44
+ },
+ {
+  "prompt": "Cuales son las ventajas de aprender a programar? There should be 2 paragraphs. Paragraphs are separated with the markdown divider: *** Your entire response should be in English, and in all lowercase letters. No capital letters are allowed.",
+  "pregunta": "Cuales son las ventajas de aprender a programar?",
+  "restriccion": "There should be 2 paragraphs. Paragraphs are separated with the markdown divider: ***\tYour entire response should be in English, and in all lowercase letters. No capital letters are allowed.",
+  "familia": "paragraphs:paragraphs",
+  "ids": [
+   "paragraphs:paragraphs",
+   "change_case:english_lowercase"
+  ],
+  "kwargs": [
+   {},
+   {}
+  ],
+  "split": "validacion",
+  "id": 45
+ },
+ {
+  "prompt": "What are good habits for learning a new language? Your response should contain less than 12 sentences.",
+  "pregunta": "What are good habits for learning a new language?",
+  "restriccion": "Your response should contain less than 12 sentences.",
+  "familia": "length_constraints:number_sentences",
+  "ids": [
+   "length_constraints:number_sentences"
+  ],
+  "kwargs": [
+   {
+    "num_sentences": 12,
+    "relation": "less than"
+   }
+  ],
+  "split": "busqueda",
+  "id": 46
+ },
+ {
+  "prompt": "Describe the city of Barcelona for a tourist guide. The response must contain at least 4 placeholders represented by square brackets, such as [address].",
+  "pregunta": "Describe the city of Barcelona for a tourist guide.",
+  "restriccion": "The response must contain at least 4 placeholders represented by square brackets, such as [address].",
+  "familia": "detectable_content:number_placeholders",
+  "ids": [
+   "detectable_content:number_placeholders"
+  ],
+  "kwargs": [
+   {
+    "num_placeholders": 4
+   }
+  ],
+  "split": "descartada",
+  "id": 47
+ },
+ {
+  "prompt": "Explica que es la fotosintesis en palabras sencillas. Highlight at least 3 sections in your answer with markdown, i.e. *highlighted section*. In your entire response, refrain from the use of any commas. At the end of your response, please explicitly add a postscript starting with P.P.S",
+  "pregunta": "Explica que es la fotosintesis en palabras sencillas.",
+  "restriccion": "Highlight at least 3 sections in your answer with markdown, i.e. *highlighted section*.\tIn your entire response, refrain from the use of any commas.\tAt the end of your response, please explicitly add a postscript starting with P.P.S",
+  "familia": "detectable_format:number_highlighted_sections",
+  "ids": [
+   "detectable_format:number_highlighted_sections",
+   "punctuation:no_comma",
+   "detectable_content:postscript"
+  ],
+  "kwargs": [
+   {
+    "num_highlights": 3
+   },
+   {},
+   {
+    "postscript_marker": "P.P.S"
+   }
+  ],
+  "split": "busqueda",
+  "id": 48
+ },
+ {
+  "prompt": "Write a short story about a lighthouse keeper who finds a mysterious bottle. In your entire response, refrain from the use of any commas.",
+  "pregunta": "Write a short story about a lighthouse keeper who finds a mysterious bottle.",
+  "restriccion": "In your entire response, refrain from the use of any commas.",
+  "familia": "punctuation:no_comma",
+  "ids": [
+   "punctuation:no_comma"
+  ],
+  "kwargs": [
+   {}
+  ],
+  "split": "validacion",
+  "id": 49
+ },
+ {
+  "prompt": "Explain why the sky is blue. In your response, the letter s should appear at least 8 times.",
+  "pregunta": "Explain why the sky is blue.",
+  "restriccion": "In your response, the letter s should appear at least 8 times.",
+  "familia": "keywords:letter_frequency",
+  "ids": [
+   "keywords:letter_frequency"
+  ],
+  "kwargs": [
+   {
+    "letter": "s",
+    "let_frequency": 8,
+    "let_relation": "at least"
+   }
+  ],
+  "split": "busqueda",
+  "id": 50
+ },
+ {
+  "prompt": "Explain the concept of supply and demand. In your entire response, refrain from the use of any commas. In your response, the letter t should appear less than 100 times.",
+  "pregunta": "Explain the concept of supply and demand.",
+  "restriccion": "In your entire response, refrain from the use of any commas.\tIn your response, the letter t should appear less than 100 times.",
+  "familia": "punctuation:no_comma",
+  "ids": [
+   "punctuation:no_comma",
+   "keywords:letter_frequency"
+  ],
+  "kwargs": [
+   {},
+   {
+    "letter": "t",
+    "let_frequency": 100,
+    "let_relation": "less than"
+   }
+  ],
+  "split": "descartada",
+  "id": 51
+ },
+ {
+  "prompt": "Describe the history of the bicycle. Do not include keywords ['bridge', 'lantern'] in the response.",
+  "pregunta": "Describe the history of the bicycle.",
+  "restriccion": "Do not include keywords ['bridge', 'lantern'] in the response.",
+  "familia": "keywords:forbidden_words",
+  "ids": [
+   "keywords:forbidden_words"
+  ],
+  "kwargs": [
+   {
+    "forbidden_words": [
+     "bridge",
+     "lantern"
+    ]
+   }
+  ],
+  "split": "busqueda",
+  "id": 52
+ },
+ {
+  "prompt": "Describe how a bill becomes a law in a parliamentary system. In your response, the letter e should appear at least 10 times.",
+  "pregunta": "Describe how a bill becomes a law in a parliamentary system.",
+  "restriccion": "In your response, the letter e should appear at least 10 times.",
+  "familia": "keywords:letter_frequency",
+  "ids": [
+   "keywords:letter_frequency"
+  ],
+  "kwargs": [
+   {
+    "letter": "e",
+    "let_frequency": 10,
+    "let_relation": "at least"
+   }
+  ],
+  "split": "descartada",
+  "id": 53
+ },
+ {
+  "prompt": "Summarize the plot of Romeo and Juliet. Your entire response should be in English, and in all lowercase letters. No capital letters are allowed. Your answer must contain a title, wrapped in double angular brackets, such as <<poem of joy>>.",
+  "pregunta": "Summarize the plot of Romeo and Juliet.",
+  "restriccion": "Your entire response should be in English, and in all lowercase letters. No capital letters are allowed.\tYour answer must contain a title, wrapped in double angular brackets, such as <<poem of joy>>.",
+  "familia": "change_case:english_lowercase",
+  "ids": [
+   "change_case:english_lowercase",
+   "detectable_format:title"
+  ],
+  "kwargs": [
+   {},
+   {}
+  ],
+  "split": "busqueda",
+  "id": 54
+ },
+ {
+  "prompt": "What are the benefits of regular exercise? In your entire response, refrain from the use of any commas.",
+  "pregunta": "What are the benefits of regular exercise?",
+  "restriccion": "In your entire response, refrain from the use of any commas.",
+  "familia": "punctuation:no_comma",
+  "ids": [
+   "punctuation:no_comma"
+  ],
+  "kwargs": [
+   {}
+  ],
+  "split": "busqueda",
+  "id": 55
+ },
+ {
+  "prompt": "Compare electric cars and gasoline cars. Entire output should be wrapped in JSON format. You can use markdown ticks such as ```.",
+  "pregunta": "Compare electric cars and gasoline cars.",
+  "restriccion": "Entire output should be wrapped in JSON format. You can use markdown ticks such as ```.",
+  "familia": "detectable_format:json_format",
+  "ids": [
+   "detectable_format:json_format"
+  ],
+  "kwargs": [
+   {}
+  ],
+  "split": "descartada",
+  "id": 56
+ },
+ {
+  "prompt": "Give advice to a student who is preparing for a final exam. In your entire response, refrain from the use of any commas. There should be 5 paragraphs. Paragraphs are separated with the markdown divider: ***",
+  "pregunta": "Give advice to a student who is preparing for a final exam.",
+  "restriccion": "In your entire response, refrain from the use of any commas.\tThere should be 5 paragraphs. Paragraphs are separated with the markdown divider: ***",
+  "familia": "punctuation:no_comma",
+  "ids": [
+   "punctuation:no_comma",
+   "length_constraints:number_paragraphs"
+  ],
+  "kwargs": [
+   {},
+   {
+    "num_paragraphs": 5
+   }
+  ],
+  "split": "busqueda",
+  "id": 57
+ },
+ {
+  "prompt": "Que recomendaciones darias para preparar una presentacion en publico? Answer with less than 150 words.",
+  "pregunta": "Que recomendaciones darias para preparar una presentacion en publico?",
+  "restriccion": "Answer with less than 150 words.",
+  "familia": "length_constraints:number_words",
+  "ids": [
+   "length_constraints:number_words"
+  ],
+  "kwargs": [
+   {
+    "num_words": 150,
+    "relation": "less than"
+   }
+  ],
+  "split": "busqueda",
+  "id": 58
+ },
+ {
+  "prompt": "Write a poem about autumn rain in the city. Your response must have 3 sections. Mark the beginning of each section with Paragraph X, such as:\nParagraph 1\n[content of section 1]\nParagraph 2\n[content of section 2]",
+  "pregunta": "Write a poem about autumn rain in the city.",
+  "restriccion": "Your response must have 3 sections. Mark the beginning of each section with Paragraph X, such as:\nParagraph 1\n[content of section 1]\nParagraph 2\n[content of section 2]",
+  "familia": "detectable_format:multiple_sections",
+  "ids": [
+   "detectable_format:multiple_sections"
+  ],
+  "kwargs": [
+   {
+    "section_spliter": "Paragraph",
+    "num_sections": 3
+   }
+  ],
+  "split": "descartada",
+  "id": 59
+ },
+ {
+  "prompt": "How can a small business improve its customer service? The response must contain at least 3 placeholders represented by square brackets, such as [address]. Your answer must contain a title, wrapped in double angular brackets, such as <<poem of joy>>.",
+  "pregunta": "How can a small business improve its customer service?",
+  "restriccion": "The response must contain at least 3 placeholders represented by square brackets, such as [address].\tYour answer must contain a title, wrapped in double angular brackets, such as <<poem of joy>>.",
+  "familia": "detectable_content:number_placeholders",
+  "ids": [
+   "detectable_content:number_placeholders",
+   "detectable_format:title"
+  ],
+  "kwargs": [
+   {
+    "num_placeholders": 3
+   },
+   {}
+  ],
+  "split": "descartada",
+  "id": 60
+ },
+ {
+  "prompt": "Write a motivational message for a team that just finished a hard project. In your response, the letter r should appear less than 100 times.",
+  "pregunta": "Write a motivational message for a team that just finished a hard project.",
+  "restriccion": "In your response, the letter r should appear less than 100 times.",
+  "familia": "keywords:letter_frequency",
+  "ids": [
+   "keywords:letter_frequency"
+  ],
+  "kwargs": [
+   {
+    "letter": "r",
+    "let_frequency": 100,
+    "let_relation": "less than"
+   }
+  ],
+  "split": "descartada",
+  "id": 61
+ },
+ {
+  "prompt": "Explain how vaccines train the immune system. In your response, words with all capital letters should appear at least 5 times. Answer with less than 300 words.",
+  "pregunta": "Explain how vaccines train the immune system.",
+  "restriccion": "In your response, words with all capital letters should appear at least 5 times.\tAnswer with less than 300 words.",
+  "familia": "change_case:capital_word_frequency",
+  "ids": [
+   "change_case:capital_word_frequency",
+   "length_constraints:number_words"
+  ],
+  "kwargs": [
+   {
+    "capital_frequency": 5,
+    "capital_relation": "at least"
+   },
+   {
+    "num_words": 300,
+    "relation": "less than"
+   }
+  ],
+  "split": "descartada",
+  "id": 62
+ },
+ {
+  "prompt": "Describe el ciclo del agua para un nino de diez anos. In your entire response, refrain from the use of any commas. There should be 2 paragraphs. Paragraphs are separated with the markdown divider: ***",
+  "pregunta": "Describe el ciclo del agua para un nino de diez anos.",
+  "restriccion": "In your entire response, refrain from the use of any commas.\tThere should be 2 paragraphs. Paragraphs are separated with the markdown divider: ***",
+  "familia": "punctuation:no_comma",
+  "ids": [
+   "punctuation:no_comma",
+   "paragraphs:paragraphs"
+  ],
+  "kwargs": [
+   {},
+   {}
+  ],
+  "split": "busqueda",
+  "id": 63
+ },
+ {
+  "prompt": "Escribe un correo formal para pedir informacion sobre un curso de programacion. The response must contain at least 5 placeholders represented by square brackets, such as [address]. Include keyword ribbon in your response.",
+  "pregunta": "Escribe un correo formal para pedir informacion sobre un curso de programacion.",
+  "restriccion": "The response must contain at least 5 placeholders represented by square brackets, such as [address].\tInclude keyword ribbon in your response.",
+  "familia": "detectable_content:number_placeholders",
+  "ids": [
+   "detectable_content:number_placeholders",
+   "keywords:word_once"
+  ],
+  "kwargs": [
+   {
+    "num_placeholders": 5
+   },
+   {
+    "keyword": "ribbon"
+   }
+  ],
+  "split": "descartada",
+  "id": 64
+ },
+ {
+  "prompt": "What should I consider when adopting a dog? Finish your response with this exact phrase Is there anything else I can help with?. No other words should follow this phrase. In your response, the letter r should appear at least 15 times.",
+  "pregunta": "What should I consider when adopting a dog?",
+  "restriccion": "Finish your response with this exact phrase Is there anything else I can help with?. No other words should follow this phrase.\tIn your response, the letter r should appear at least 15 times.",
+  "familia": "startend:end_checker",
+  "ids": [
+   "startend:end_checker",
+   "keywords:letter_frequency"
+  ],
+  "kwargs": [
+   {
+    "end_phrase": "Is there anything else I can help with?"
+   },
+   {
+    "letter": "r",
+    "let_frequency": 15,
+    "let_relation": "at least"
+   }
+  ],
+  "split": "descartada",
+  "id": 65
+ },
+ {
+  "prompt": "A train travels 180 km in 3 hours. What is its average speed in km/h? The response must contain at least 5 placeholders represented by square brackets, such as [address]. Your response should contain at least 4 sentences. Include keyword market in your response.",
+  "pregunta": "A train travels 180 km in 3 hours. What is its average speed in km/h?",
+  "restriccion": "The response must contain at least 5 placeholders represented by square brackets, such as [address].\tYour response should contain at least 4 sentences.\tInclude keyword market in your response.",
+  "familia": "detectable_content:number_placeholders",
+  "ids": [
+   "detectable_content:number_placeholders",
+   "length_constraints:number_sentences",
+   "keywords:word_once"
+  ],
+  "kwargs": [
+   {
+    "num_placeholders": 5
+   },
+   {
+    "num_sentences": 4,
+    "relation": "at least"
+   },
+   {
+    "keyword": "market"
+   }
+  ],
+  "split": "validacion",
+  "id": 66
+ },
+ {
+  "prompt": "What is the Pythagorean theorem and how is it used? Your entire response should be in English, and in all lowercase letters. No capital letters are allowed. Your answer must contain a title, wrapped in double angular brackets, such as <<poem of joy>>. Include keyword planet in your response.",
+  "pregunta": "What is the Pythagorean theorem and how is it used?",
+  "restriccion": "Your entire response should be in English, and in all lowercase letters. No capital letters are allowed.\tYour answer must contain a title, wrapped in double angular brackets, such as <<poem of joy>>.\tInclude keyword planet in your response.",
+  "familia": "change_case:english_lowercase",
+  "ids": [
+   "change_case:english_lowercase",
+   "detectable_format:title",
+   "keywords:word_once"
+  ],
+  "kwargs": [
+   {},
+   {},
+   {
+    "keyword": "planet"
+   }
+  ],
+  "split": "busqueda",
+  "id": 67
+ },
+ {
+  "prompt": "Explain the difference between a list and a tuple in Python. In your response, the letter s should appear at least 15 times. The response must contain at least 3 placeholders represented by square brackets, such as [address].",
+  "pregunta": "Explain the difference between a list and a tuple in Python.",
+  "restriccion": "In your response, the letter s should appear at least 15 times.\tThe response must contain at least 3 placeholders represented by square brackets, such as [address].",
+  "familia": "keywords:letter_frequency",
+  "ids": [
+   "keywords:letter_frequency",
+   "detectable_content:number_placeholders"
+  ],
+  "kwargs": [
+   {
+    "letter": "s",
+    "let_frequency": 15,
+    "let_relation": "at least"
+   },
+   {
+    "num_placeholders": 3
+   }
+  ],
+  "split": "busqueda",
+  "id": 68
+ },
+ {
+  "prompt": "Give tips for staying focused while working from home. There should be 4 paragraphs. Paragraphs are separated with the markdown divider: *** In your entire response, refrain from the use of any commas.",
+  "pregunta": "Give tips for staying focused while working from home.",
+  "restriccion": "There should be 4 paragraphs. Paragraphs are separated with the markdown divider: ***\tIn your entire response, refrain from the use of any commas.",
+  "familia": "length_constraints:number_paragraphs",
+  "ids": [
+   "length_constraints:number_paragraphs",
+   "punctuation:no_comma"
+  ],
+  "kwargs": [
+   {
+    "num_paragraphs": 4
+   },
+   {}
+  ],
+  "split": "descartada",
+  "id": 69
+ },
+ {
+  "prompt": "Explain what inflation is and how it affects savings. In your response, the letter t should appear less than 100 times.",
+  "pregunta": "Explain what inflation is and how it affects savings.",
+  "restriccion": "In your response, the letter t should appear less than 100 times.",
+  "familia": "keywords:letter_frequency",
+  "ids": [
+   "keywords:letter_frequency"
+  ],
+  "kwargs": [
+   {
+    "letter": "t",
+    "let_frequency": 100,
+    "let_relation": "less than"
+   }
+  ],
+  "split": "busqueda",
+  "id": 70
+ },
+ {
+  "prompt": "Explica la diferencia entre clima y tiempo atmosferico. Start and end your response with the same word (do not write anything after the last word, not even punctuation). There should be 4 paragraphs. Paragraphs and only paragraphs are separated with each other by two new lines as if it was '\\n\\n' in python. Paragraph 2 must start with word Meanwhile.",
+  "pregunta": "Explica la diferencia entre clima y tiempo atmosferico.",
+  "restriccion": "Start and end your response with the same word (do not write anything after the last word, not even punctuation).\tThere should be 4 paragraphs. Paragraphs and only paragraphs are separated with each other by two new lines as if it was '\\n\\n' in python. Paragraph 2 must start with word Meanwhile.",
+  "familia": "keywords:start_end",
+  "ids": [
+   "keywords:start_end",
+   "length_constraints:nth_paragraph_first_word"
+  ],
+  "kwargs": [
+   {},
+   {
+    "num_paragraphs": 4,
+    "nth_paragraph": 2,
+    "first_word": "Meanwhile"
+   }
+  ],
+  "split": "busqueda",
+  "id": 71
+ },
+ {
+  "prompt": "Explain how photosynthesis works. The last word of your response should be the word together.",
+  "pregunta": "Explain how photosynthesis works.",
+  "restriccion": "The last word of your response should be the word together.",
+  "familia": "last_word:last_word_answer",
+  "ids": [
+   "last_word:last_word_answer"
+  ],
+  "kwargs": [
+   {
+    "last_word": "together"
+   }
+  ],
+  "split": "descartada",
+  "id": 72
+ },
+ {
+  "prompt": "Write a cover letter for a junior data analyst position. In your response, words with all capital letters should appear less than 20 times.",
+  "pregunta": "Write a cover letter for a junior data analyst position.",
+  "restriccion": "In your response, words with all capital letters should appear less than 20 times.",
+  "familia": "change_case:capital_word_frequency",
+  "ids": [
+   "change_case:capital_word_frequency"
+  ],
+  "kwargs": [
+   {
+    "capital_frequency": 20,
+    "capital_relation": "less than"
+   }
+  ],
+  "split": "busqueda",
+  "id": 73
+ },
+ {
+  "prompt": "Write a SQL query that returns the ten most expensive products from a table named products. There should be 2 paragraphs. Paragraphs and only paragraphs are separated with each other by two new lines as if it was '\\n\\n' in python. Paragraph 2 must start with word First. In your entire response, refrain from the use of any commas. The response must contain at least 4 placeholders represented by square brackets, such as [address].",
+  "pregunta": "Write a SQL query that returns the ten most expensive products from a table named products.",
+  "restriccion": "There should be 2 paragraphs. Paragraphs and only paragraphs are separated with each other by two new lines as if it was '\\n\\n' in python. Paragraph 2 must start with word First.\tIn your entire response, refrain from the use of any commas.\tThe response must contain at least 4 placeholders represented by square brackets, such as [address].",
+  "familia": "length_constraints:nth_paragraph_first_word",
+  "ids": [
+   "length_constraints:nth_paragraph_first_word",
+   "punctuation:no_comma",
+   "detectable_content:number_placeholders"
+  ],
+  "kwargs": [
+   {
+    "num_paragraphs": 2,
+    "nth_paragraph": 2,
+    "first_word": "First"
+   },
+   {},
+   {
+    "num_placeholders": 4
+   }
+  ],
+  "split": "validacion",
+  "id": 74
+ },
+ {
+  "prompt": "Resume la historia de la independencia de Colombia. Your answer must contain exactly 6 bullet points. Use the markdown bullet points such as:\n* This is point 1. \n* This is point 2 Finish your response with this exact phrase That's my answer.. No other words should follow this phrase.",
+  "pregunta": "Resume la historia de la independencia de Colombia.",
+  "restriccion": "Your answer must contain exactly 6 bullet points. Use the markdown bullet points such as:\n* This is point 1. \n* This is point 2\tFinish your response with this exact phrase That's my answer.. No other words should follow this phrase.",
+  "familia": "detectable_format:number_bullet_lists",
+  "ids": [
+   "detectable_format:number_bullet_lists",
+   "startend:end_checker"
+  ],
+  "kwargs": [
+   {
+    "num_bullets": 6
+   },
+   {
+    "end_phrase": "That's my answer."
+   }
+  ],
+  "split": "descartada",
+  "id": 75
+ },
+ {
+  "prompt": "Dame consejos para ahorrar dinero cada mes. The response must contain at least 4 placeholders represented by square brackets, such as [address].",
+  "pregunta": "Dame consejos para ahorrar dinero cada mes.",
+  "restriccion": "The response must contain at least 4 placeholders represented by square brackets, such as [address].",
+  "familia": "detectable_content:number_placeholders",
+  "ids": [
+   "detectable_content:number_placeholders"
+  ],
+  "kwargs": [
+   {
+    "num_placeholders": 4
+   }
+  ],
+  "split": "descartada",
+  "id": 76
+ },
+ {
+  "prompt": "Un rectangulo mide 12 metros de largo y 5 de ancho. Cual es su area? Your answer must contain exactly 2 bullet points. Use the markdown bullet points such as:\n* This is point 1. \n* This is point 2",
+  "pregunta": "Un rectangulo mide 12 metros de largo y 5 de ancho. Cual es su area?",
+  "restriccion": "Your answer must contain exactly 2 bullet points. Use the markdown bullet points such as:\n* This is point 1. \n* This is point 2",
+  "familia": "detectable_format:number_bullet_lists",
+  "ids": [
+   "detectable_format:number_bullet_lists"
+  ],
+  "kwargs": [
+   {
+    "num_bullets": 2
+   }
+  ],
+  "split": "descartada",
+  "id": 77
+ },
+ {
+  "prompt": "Escribe una funcion en Python que cuente las vocales de un texto. In your entire response, refrain from the use of any commas. Your answer must contain a title, wrapped in double angular brackets, such as <<poem of joy>>.",
+  "pregunta": "Escribe una funcion en Python que cuente las vocales de un texto.",
+  "restriccion": "In your entire response, refrain from the use of any commas.\tYour answer must contain a title, wrapped in double angular brackets, such as <<poem of joy>>.",
+  "familia": "punctuation:no_comma",
+  "ids": [
+   "punctuation:no_comma",
+   "detectable_format:title"
+  ],
+  "kwargs": [
+   {},
+   {}
+  ],
+  "split": "descartada",
+  "id": 78
+ },
+ {
+  "prompt": "Describe the main causes of the French Revolution. The response must contain at least 2 placeholders represented by square brackets, such as [address]. In your entire response, refrain from the use of any commas.",
+  "pregunta": "Describe the main causes of the French Revolution.",
+  "restriccion": "The response must contain at least 2 placeholders represented by square brackets, such as [address].\tIn your entire response, refrain from the use of any commas.",
+  "familia": "detectable_content:number_placeholders",
+  "ids": [
+   "detectable_content:number_placeholders",
+   "punctuation:no_comma"
+  ],
+  "kwargs": [
+   {
+    "num_placeholders": 2
+   },
+   {}
+  ],
+  "split": "descartada",
+  "id": 79
+ },
+ {
+  "prompt": "Write a JavaScript function that reverses a string. The response must contain at least 2 placeholders represented by square brackets, such as [address].",
+  "pregunta": "Write a JavaScript function that reverses a string.",
+  "restriccion": "The response must contain at least 2 placeholders represented by square brackets, such as [address].",
+  "familia": "detectable_content:number_placeholders",
+  "ids": [
+   "detectable_content:number_placeholders"
+  ],
+  "kwargs": [
+   {
+    "num_placeholders": 2
+   }
+  ],
+  "split": "busqueda",
+  "id": 80
+ },
+ {
+  "prompt": "Explain what an API is to a beginner. In your response, the letter o should appear at least 8 times. The response must contain at least 4 placeholders represented by square brackets, such as [address]. The last word of your response should be the word finished.",
+  "pregunta": "Explain what an API is to a beginner.",
+  "restriccion": "In your response, the letter o should appear at least 8 times.\tThe response must contain at least 4 placeholders represented by square brackets, such as [address].\tThe last word of your response should be the word finished.",
+  "familia": "keywords:letter_frequency",
+  "ids": [
+   "keywords:letter_frequency",
+   "detectable_content:number_placeholders",
+   "last_word:last_word_answer"
+  ],
+  "kwargs": [
+   {
+    "letter": "o",
+    "let_frequency": 8,
+    "let_relation": "at least"
+   },
+   {
+    "num_placeholders": 4
+   },
+   {
+    "last_word": "finished"
+   }
+  ],
+  "split": "busqueda",
+  "id": 81
+ },
+ {
+  "prompt": "Explain how to make a good first impression at a job interview. Include keywords ['anchor', 'balance', 'planet'] in the response. In your response, the letter t should appear less than 80 times.",
+  "pregunta": "Explain how to make a good first impression at a job interview.",
+  "restriccion": "Include keywords ['anchor', 'balance', 'planet'] in the response.\tIn your response, the letter t should appear less than 80 times.",
+  "familia": "keywords:existence",
+  "ids": [
+   "keywords:existence",
+   "keywords:letter_frequency"
+  ],
+  "kwargs": [
+   {
+    "keywords": [
+     "anchor",
+     "balance",
+     "planet"
+    ]
+   },
+   {
+    "letter": "t",
+    "let_frequency": 80,
+    "let_relation": "less than"
+   }
+  ],
+  "split": "descartada",
+  "id": 82
+ },
+ {
+  "prompt": "Write a short product description for a reusable water bottle. Start and end your response with the same word (do not write anything after the last word, not even punctuation). In your response, the letter t should appear less than 80 times.",
+  "pregunta": "Write a short product description for a reusable water bottle.",
+  "restriccion": "Start and end your response with the same word (do not write anything after the last word, not even punctuation).\tIn your response, the letter t should appear less than 80 times.",
+  "familia": "keywords:start_end",
+  "ids": [
+   "keywords:start_end",
+   "keywords:letter_frequency"
+  ],
+  "kwargs": [
+   {},
+   {
+    "letter": "t",
+    "let_frequency": 80,
+    "let_relation": "less than"
+   }
+  ],
+  "split": "validacion",
+  "id": 83
+ },
+ {
+  "prompt": "Describe how to prepare a simple vegetable soup. Your response should contain at least 6 sentences. Your entire response should be in English, and in all capital letters.",
+  "pregunta": "Describe how to prepare a simple vegetable soup.",
+  "restriccion": "Your response should contain at least 6 sentences.\tYour entire response should be in English, and in all capital letters.",
+  "familia": "length_constraints:number_sentences",
+  "ids": [
+   "length_constraints:number_sentences",
+   "change_case:english_capital"
+  ],
+  "kwargs": [
+   {
+    "num_sentences": 6,
+    "relation": "at least"
+   },
+   {}
+  ],
+  "split": "validacion",
+  "id": 84
+ },
+ {
+  "prompt": "Maria has 24 apples and gives away a third of them. How many apples does she have left? Your answer must contain exactly 4 bullet points. Use the markdown bullet points such as:\n* This is point 1. \n* This is point 2 Your answer must contain a title, wrapped in double angular brackets, such as <<poem of joy>>.",
+  "pregunta": "Maria has 24 apples and gives away a third of them. How many apples does she have left?",
+  "restriccion": "Your answer must contain exactly 4 bullet points. Use the markdown bullet points such as:\n* This is point 1. \n* This is point 2\tYour answer must contain a title, wrapped in double angular brackets, such as <<poem of joy>>.",
+  "familia": "detectable_format:number_bullet_lists",
+  "ids": [
+   "detectable_format:number_bullet_lists",
+   "detectable_format:title"
+  ],
+  "kwargs": [
+   {
+    "num_bullets": 4
+   },
+   {}
+  ],
+  "split": "descartada",
+  "id": 85
+ },
+ {
+  "prompt": "Explain what machine learning is. In your entire response, refrain from the use of any commas. There should be 2 paragraphs. Paragraphs are separated with the markdown divider: ***",
+  "pregunta": "Explain what machine learning is.",
+  "restriccion": "In your entire response, refrain from the use of any commas.\tThere should be 2 paragraphs. Paragraphs are separated with the markdown divider: ***",
+  "familia": "punctuation:no_comma",
+  "ids": [
+   "punctuation:no_comma",
+   "paragraphs:paragraphs"
+  ],
+  "kwargs": [
+   {},
+   {}
+  ],
+  "split": "validacion",
+  "id": 86
+ },
+ {
+  "prompt": "Describe the water cycle. In your response, words with all capital letters should appear at least 5 times. Include keyword journey in your response.",
+  "pregunta": "Describe the water cycle.",
+  "restriccion": "In your response, words with all capital letters should appear at least 5 times.\tInclude keyword journey in your response.",
+  "familia": "change_case:capital_word_frequency",
+  "ids": [
+   "change_case:capital_word_frequency",
+   "keywords:word_once"
+  ],
+  "kwargs": [
+   {
+    "capital_frequency": 5,
+    "capital_relation": "at least"
+   },
+   {
+    "keyword": "journey"
+   }
+  ],
+  "split": "busqueda",
+  "id": 87
+ },
+ {
+  "prompt": "Write a python function to check whether a number is prime. In your entire response, refrain from the use of any commas. There should be 2 paragraphs. Paragraphs are separated with the markdown divider: ***",
+  "pregunta": "Write a python function to check whether a number is prime.",
+  "restriccion": "In your entire response, refrain from the use of any commas.\tThere should be 2 paragraphs. Paragraphs are separated with the markdown divider: ***",
+  "familia": "punctuation:no_comma",
+  "ids": [
+   "punctuation:no_comma",
+   "paragraphs:paragraphs"
+  ],
+  "kwargs": [
+   {},
+   {}
+  ],
+  "split": "validacion",
+  "id": 88
+ },
+ {
+  "prompt": "What is the difference between weather and climate? In your response, the letter t should appear less than 80 times.",
+  "pregunta": "What is the difference between weather and climate?",
+  "restriccion": "In your response, the letter t should appear less than 80 times.",
+  "familia": "keywords:letter_frequency",
+  "ids": [
+   "keywords:letter_frequency"
+  ],
+  "kwargs": [
+   {
+    "letter": "t",
+    "let_frequency": 80,
+    "let_relation": "less than"
+   }
+  ],
+  "split": "busqueda",
+  "id": 89
+ },
+ {
+  "prompt": "Cuales son las ventajas de aprender a programar? Include keyword mirror in your response.",
+  "pregunta": "Cuales son las ventajas de aprender a programar?",
+  "restriccion": "Include keyword mirror in your response.",
+  "familia": "keywords:word_once",
+  "ids": [
+   "keywords:word_once"
+  ],
+  "kwargs": [
+   {
+    "keyword": "mirror"
+   }
+  ],
+  "split": "descartada",
+  "id": 90
+ },
+ {
+  "prompt": "What are good habits for learning a new language? Finish your response with this exact phrase Let me know if you need more.. No other words should follow this phrase. The response must contain at least 4 placeholders represented by square brackets, such as [address].",
+  "pregunta": "What are good habits for learning a new language?",
+  "restriccion": "Finish your response with this exact phrase Let me know if you need more.. No other words should follow this phrase.\tThe response must contain at least 4 placeholders represented by square brackets, such as [address].",
+  "familia": "startend:end_checker",
+  "ids": [
+   "startend:end_checker",
+   "detectable_content:number_placeholders"
+  ],
+  "kwargs": [
+   {
+    "end_phrase": "Let me know if you need more."
+   },
+   {
+    "num_placeholders": 4
+   }
+  ],
+  "split": "busqueda",
+  "id": 91
+ },
+ {
+  "prompt": "Describe the city of Barcelona for a tourist guide. Highlight at least 2 sections in your answer with markdown, i.e. *highlighted section*. In your response, the letter t should appear less than 60 times.",
+  "pregunta": "Describe the city of Barcelona for a tourist guide.",
+  "restriccion": "Highlight at least 2 sections in your answer with markdown, i.e. *highlighted section*.\tIn your response, the letter t should appear less than 60 times.",
+  "familia": "detectable_format:number_highlighted_sections",
+  "ids": [
+   "detectable_format:number_highlighted_sections",
+   "keywords:letter_frequency"
+  ],
+  "kwargs": [
+   {
+    "num_highlights": 2
+   },
+   {
+    "letter": "t",
+    "let_frequency": 60,
+    "let_relation": "less than"
+   }
+  ],
+  "split": "busqueda",
+  "id": 92
+ },
+ {
+  "prompt": "Explica que es la fotosintesis en palabras sencillas. Your entire response should be in English, and in all lowercase letters. No capital letters are allowed. There should be 2 paragraphs. Paragraphs are separated with the markdown divider: ***",
+  "pregunta": "Explica que es la fotosintesis en palabras sencillas.",
+  "restriccion": "Your entire response should be in English, and in all lowercase letters. No capital letters are allowed.\tThere should be 2 paragraphs. Paragraphs are separated with the markdown divider: ***",
+  "familia": "change_case:english_lowercase",
+  "ids": [
+   "change_case:english_lowercase",
+   "paragraphs:paragraphs"
+  ],
+  "kwargs": [
+   {},
+   {}
+  ],
+  "split": "validacion",
+  "id": 93
+ },
+ {
+  "prompt": "Write a short story about a lighthouse keeper who finds a mysterious bottle. In your response, the letter t should appear at least 8 times. There should be 5 paragraphs. Paragraphs are separated with the markdown divider: ***",
+  "pregunta": "Write a short story about a lighthouse keeper who finds a mysterious bottle.",
+  "restriccion": "In your response, the letter t should appear at least 8 times.\tThere should be 5 paragraphs. Paragraphs are separated with the markdown divider: ***",
+  "familia": "keywords:letter_frequency",
+  "ids": [
+   "keywords:letter_frequency",
+   "length_constraints:number_paragraphs"
+  ],
+  "kwargs": [
+   {
+    "letter": "t",
+    "let_frequency": 8,
+    "let_relation": "at least"
+   },
+   {
+    "num_paragraphs": 5
+   }
+  ],
+  "split": "validacion",
+  "id": 94
+ },
+ {
+  "prompt": "Explain why the sky is blue. Your answer must contain a title, wrapped in double angular brackets, such as <<poem of joy>>. The last word of your response should be the word clear.",
+  "pregunta": "Explain why the sky is blue.",
+  "restriccion": "Your answer must contain a title, wrapped in double angular brackets, such as <<poem of joy>>.\tThe last word of your response should be the word clear.",
+  "familia": "detectable_format:title",
+  "ids": [
+   "detectable_format:title",
+   "last_word:last_word_answer"
+  ],
+  "kwargs": [
+   {},
+   {
+    "last_word": "clear"
+   }
+  ],
+  "split": "busqueda",
+  "id": 95
+ },
+ {
+  "prompt": "Explain the concept of supply and demand. Do not include keywords ['bridge', 'anchor'] in the response. At the end of your response, please explicitly add a postscript starting with P.P.S",
+  "pregunta": "Explain the concept of supply and demand.",
+  "restriccion": "Do not include keywords ['bridge', 'anchor'] in the response.\tAt the end of your response, please explicitly add a postscript starting with P.P.S",
+  "familia": "keywords:forbidden_words",
+  "ids": [
+   "keywords:forbidden_words",
+   "detectable_content:postscript"
+  ],
+  "kwargs": [
+   {
+    "forbidden_words": [
+     "bridge",
+     "anchor"
+    ]
+   },
+   {
+    "postscript_marker": "P.P.S"
+   }
+  ],
+  "split": "validacion",
+  "id": 96
+ },
+ {
+  "prompt": "Describe the history of the bicycle. In your response, the word anchor should appear less than 3 times. Your response should contain at least 6 sentences.",
+  "pregunta": "Describe the history of the bicycle.",
+  "restriccion": "In your response, the word anchor should appear less than 3 times.\tYour response should contain at least 6 sentences.",
+  "familia": "keywords:frequency",
+  "ids": [
+   "keywords:frequency",
+   "length_constraints:number_sentences"
+  ],
+  "kwargs": [
+   {
+    "keyword": "anchor",
+    "frequency": 3,
+    "relation": "less than"
+   },
+   {
+    "num_sentences": 6,
+    "relation": "at least"
+   }
+  ],
+  "split": "validacion",
+  "id": 97
+ },
+ {
+  "prompt": "Describe how a bill becomes a law in a parliamentary system. Your response must have 4 sections. Mark the beginning of each section with Paragraph X, such as:\nParagraph 1\n[content of section 1]\nParagraph 2\n[content of section 2]",
+  "pregunta": "Describe how a bill becomes a law in a parliamentary system.",
+  "restriccion": "Your response must have 4 sections. Mark the beginning of each section with Paragraph X, such as:\nParagraph 1\n[content of section 1]\nParagraph 2\n[content of section 2]",
+  "familia": "detectable_format:multiple_sections",
+  "ids": [
+   "detectable_format:multiple_sections"
+  ],
+  "kwargs": [
+   {
+    "section_spliter": "Paragraph",
+    "num_sections": 4
+   }
+  ],
+  "split": "validacion",
+  "id": 98
+ },
+ {
+  "prompt": "Summarize the plot of Romeo and Juliet. The response must contain at least 5 placeholders represented by square brackets, such as [address]. In your response, the letter e should appear less than 100 times.",
+  "pregunta": "Summarize the plot of Romeo and Juliet.",
+  "restriccion": "The response must contain at least 5 placeholders represented by square brackets, such as [address].\tIn your response, the letter e should appear less than 100 times.",
+  "familia": "detectable_content:number_placeholders",
+  "ids": [
+   "detectable_content:number_placeholders",
+   "keywords:letter_frequency"
+  ],
+  "kwargs": [
+   {
+    "num_placeholders": 5
+   },
+   {
+    "letter": "e",
+    "let_frequency": 100,
+    "let_relation": "less than"
+   }
+  ],
+  "split": "busqueda",
+  "id": 99
+ },
+ {
+  "prompt": "What are the benefits of regular exercise? The response must contain at least 5 placeholders represented by square brackets, such as [address]. Your entire response should be in English, and in all capital letters.",
+  "pregunta": "What are the benefits of regular exercise?",
+  "restriccion": "The response must contain at least 5 placeholders represented by square brackets, such as [address].\tYour entire response should be in English, and in all capital letters.",
+  "familia": "detectable_content:number_placeholders",
+  "ids": [
+   "detectable_content:number_placeholders",
+   "change_case:english_capital"
+  ],
+  "kwargs": [
+   {
+    "num_placeholders": 5
+   },
+   {}
+  ],
+  "split": "descartada",
+  "id": 100
+ }
+]
