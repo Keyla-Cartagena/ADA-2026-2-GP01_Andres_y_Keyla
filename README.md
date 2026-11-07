@@ -34,6 +34,14 @@ Ejecución del notebook de búsqueda en Colab (GPU T4), modelo `qwen17b`, temper
 
 Las tuplas siguen el orden rol, estrategia, formato, estilo, cierre.
 
+![Curva de la búsqueda](resultados/curva_busqueda.png)
+
+Cada punto es una configuración nueva evaluada sobre las 100 instancias de búsqueda; la línea es la mejor precisión encontrada hasta ese momento. Los escalones son las mejoras: la precisión llega a 16 % en el reinicio 1 (consulta 27) y a 18 % en el reinicio 3 (consulta 127).
+
+![Ahorro de la poda](resultados/ahorro_poda.png)
+
+Con los mismos dos reinicios, la poda guiada por trazas evalúa entre un 15 % y un 23 % menos configuraciones en los datos del curso, en los datos propios (`datos de  prueba/datos_visibles_100.json`) y en el oráculo sintético, sin empeorar el resultado. La gráfica se genera con `python pruebas/grafica_ahorro_poda.py`; el detalle está en el informe, sección 7.5.
+
 La precisión de validación es menor que la de búsqueda porque la configuración se eligió como la mejor entre 140 sobre las mismas 100 instancias (sesgo de selección); la diferencia es de un error estándar aproximadamente. El análisis completo está en el informe, sección 7.
 
 El notebook guardado en el repositorio se volvió a ejecutar desde la caché, por eso muestra un tiempo total casi nulo; los resultados son los mismos.
@@ -45,10 +53,13 @@ El notebook guardado en el repositorio se volvió a ejecutar desde la caché, po
 | `notebooks/01_busqueda.ipynb` | Notebook de búsqueda: método, registro de configuraciones y precisiones, análisis de trazas, poda y validación con `oraculo.validar`. Genera `entrega.json`. |
 | `notebooks/02_evaluacion.ipynb` | Notebook de evaluación: carga `entrega.json` y la evalúa sobre `datos_prueba.json` sin editar código. |
 | `entrega.json` | Configuración entregada (grupo, semana, índices y temperatura). Se genera al ejecutar el notebook de búsqueda. |
-| `resultados/` | Evidencia de la ejecución: `evaluaciones.csv`, `registro_busqueda.json`, `derrotas.csv`, `poda.json`, `curva_busqueda.png`, `cache_oraculo.json.gz`. |
+| `resultados/` | Evidencia de la ejecución: `evaluaciones.csv`, `registro_busqueda.json`, `derrotas.csv`, `poda.json`, `curva_busqueda.png`, `ahorro_poda.png`, `cache_oraculo.json.gz`. |
+| `datos de  prueba/datos_visibles_100.json` | Datos de prueba propios: 100 instancias (40 de búsqueda, 25 de validación, 35 descartadas) con el formato de `datos_visibles.json`. |
 | `docs/manual_tecnico.tex`, `docs/manual_tecnico.pdf` | Manual técnico de la solución base (fuente LaTeX y PDF compilado). |
 | `docs/informe_primera_entrega.docx` | Informe académico: formalización, prueba de NP-dureza desde 3-SAT, complejidad de muestreo y resultados. |
 | `pruebas/prueba_busqueda_simulada.py` | Prueba sin GPU de la heurística con un oráculo sintético (`python pruebas/prueba_busqueda_simulada.py`). |
+| `pruebas/comparar_poda_sintetica.py` | Compara la búsqueda con y sin poda sobre 50 óptimos sintéticos (tabla 14 del informe). |
+| `pruebas/grafica_ahorro_poda.py` | Genera `resultados/ahorro_poda.png`. |
 | `oraculo.py`, `ayudas.py`, `datos_visibles.json` | Archivos del curso, sin modificar ([repo original](https://github.com/DanielMelo404/Proyecto-Oraculo-AyD)). |
 | `proyecto_oraculo.ipynb` | Notebook original del curso, como referencia. |
 
