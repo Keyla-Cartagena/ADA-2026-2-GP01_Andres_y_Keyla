@@ -21,7 +21,8 @@ Ejecución del notebook de búsqueda en Colab (GPU T4), modelo `qwen17b`, temper
 | Configuración entregada | `rol 1, estrategia 2, formato 3, estilo 5, cierre 1, temperatura 0.0` |
 | Precisión en búsqueda (100 instancias) | **18.0 %** (18/100) |
 | Precisión en validación (87 instancias, `oraculo.validar`) | **12.6 %** (11/87) |
-| Configuraciones evaluadas | 140 de 32 768 (sin poda habrían sido hasta 283) |
+| Configuraciones evaluadas | 140 de 32 768 |
+| Ahorro de la poda con los mismos reinicios | 15 % a 23 % menos configuraciones, con el mismo resultado o mejor (informe, sección 7.5) |
 | Opciones descartadas por la poda | 20 (quedan 4 por ranura) |
 | Tiempo de generación | ≈ 200 s por configuración no guardada en caché; 46.6 min en la última sesión (14 configuraciones) |
 
