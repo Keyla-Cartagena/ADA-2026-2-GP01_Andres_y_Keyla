@@ -4,13 +4,38 @@ Análisis y Diseño de Algoritmos · 2026-B · Universidad de Caldas
 
 **Integrantes:** Andrés Santiago Restrepo Duque · Keyla Daniela Cartagena Díaz
 **Subproyecto:** ADAG1 · Proyecto Oráculo
-**Versión entregada:** rama `main`, primera entrega (solución base)
+**Versión entregada:** rama `main`, primera entrega (solución base, con resultados)
 
 ## De qué trata
 
 Buscamos una configuración de prompt que haga que un modelo de lenguaje cumpla restricciones verificables. Una configuración tiene un índice por ranura (`rol`, `estrategia`, `formato`, `estilo`, `cierre`, con 8 opciones cada una) y una temperatura. Con la temperatura fija en 0.0 el espacio tiene 8⁵ = 32 768 configuraciones. La precisión de una configuración es la fracción de instancias que cumplen **todas** sus restricciones.
 
 La solución base es un **ascenso por coordenadas con reinicios y poda guiada por trazas de fallos**: se cambia una ranura a la vez, y las opciones que, según las trazas, rompen instancias que otra opción resuelve se descartan de las pasadas siguientes. El resultado es la mejor configuración observada, no un óptimo demostrado.
+
+## Resultados
+
+Ejecución del notebook de búsqueda en Colab (GPU T4), modelo `qwen17b`, temperatura 0.0 y semilla 1, con 3 reinicios de hasta 3 pasadas.
+
+| Dato | Valor |
+|---|---|
+| Configuración entregada | `rol 1, estrategia 2, formato 3, estilo 5, cierre 1, temperatura 0.0` |
+| Precisión en búsqueda (100 instancias) | **18.0 %** (18/100) |
+| Precisión en validación (87 instancias, `oraculo.validar`) | **12.6 %** (11/87) |
+| Configuraciones evaluadas | 140 de 32 768 (sin poda habrían sido hasta 283) |
+| Opciones descartadas por la poda | 20 (quedan 4 por ranura) |
+| Tiempo de generación | ≈ 200 s por configuración no guardada en caché; 46.6 min en la última sesión (14 configuraciones) |
+
+| Reinicio | Punto de partida | Configuración final | Precisión |
+|---|---|---|---|
+| 1 | (0, 0, 0, 0, 0) | (1, 4, 0, 5, 0) | 16 % |
+| 2 | (2, 1, 4, 1, 7) | (0, 1, 4, 1, 0) | 12 % |
+| 3 | (7, 7, 6, 3, 1) | (1, 2, 3, 5, 1) | **18 %** |
+
+Las tuplas siguen el orden rol, estrategia, formato, estilo, cierre.
+
+La precisión de validación es menor que la de búsqueda porque la configuración se eligió como la mejor entre 140 sobre las mismas 100 instancias (sesgo de selección); la diferencia es de un error estándar aproximadamente. El análisis completo está en el informe, sección 7.
+
+El notebook guardado en el repositorio se volvió a ejecutar desde la caché, por eso muestra un tiempo total casi nulo; los resultados son los mismos.
 
 ## Contenido
 
@@ -67,9 +92,9 @@ La salida respeta las restricciones del problema si la precisión está entre 0 
 ```json
 {
  "grupo": "G01",
- "config": {"rol": 0, "estrategia": 0, "formato": 0, "estilo": 0, "cierre": 0, "temperatura": 0.0},
+ "config": {"rol": 1, "estrategia": 2, "formato": 3, "estilo": 5, "cierre": 1, "temperatura": 0.0},
  "semana": 5
 }
 ```
 
-Cada índice va de 0 a 7 y `temperatura` es 0.0, 0.3 o 0.7. Los valores de arriba son solo un ejemplo del formato: el archivo real lo genera el notebook de búsqueda.
+Cada índice va de 0 a 7 y `temperatura` es 0.0, 0.3 o 0.7. Este es el contenido del `entrega.json` del repositorio, generado por la sección 8 del notebook de búsqueda.
