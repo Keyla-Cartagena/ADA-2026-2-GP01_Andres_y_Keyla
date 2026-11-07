@@ -80,7 +80,7 @@ Andrés Santiago Restrepo Duque\par
 Keyla Daniela Cartagena Díaz\par
 \vfill
 Manizales\par
-Noviembre 4 de 2026\par
+Noviembre 6 de 2026\par
 \end{titlepage}
 
 \renewcommand{\contentsname}{\centering Contenido}
@@ -170,10 +170,16 @@ La figura~\ref{fig:arbol} muestra la organización de carpetas. Los archivos ora
 .2 resultados/\DTcomment{evidencia generada por 01\_busqueda.ipynb}.
 .3 evaluaciones.csv, registro\_busqueda.json.
 .3 derrotas.csv, poda.json, curva\_busqueda.png.
-.3 cache\_oraculo.json.gz.
-.2 pruebas/.
-.3 prueba\_busqueda\_simulada.py\DTcomment{prueba sin GPU}.
-.2 docs/\DTcomment{manual técnico}.
+.3 ahorro\_poda.png, cache\_oraculo.json.gz.
+.2 datos de\ \ prueba/\DTcomment{datos de prueba propios}.
+.3 datos\_visibles\_100.json.
+.2 pruebas/\DTcomment{scripts sin GPU}.
+.3 prueba\_busqueda\_simulada.py\DTcomment{prueba con oráculo sintético}.
+.3 comparar\_poda\_sintetica.py\DTcomment{búsqueda con y sin poda}.
+.3 grafica\_ahorro\_poda.py\DTcomment{genera ahorro\_poda.png}.
+.2 docs/.
+.3 informe\_primera\_entrega.docx\DTcomment{informe académico}.
+.3 manual\_tecnico.tex, manual\_tecnico.pdf\DTcomment{este manual}.
 .2 entrega.json\DTcomment{configuración entregada}.
 .2 oraculo.py, ayudas.py, datos\_visibles.json\DTcomment{archivos del curso}.
 .2 proyecto\_oraculo.ipynb\DTcomment{notebook original del curso}.
@@ -196,6 +202,9 @@ ayudas.py & Carga el modelo y los datos, separa las particiones de búsqueda y v
 01\_busqueda.ipynb & Implementa la heurística, registra cada evaluación, aplica la poda basada en trazas, valida la configuración elegida y exporta la evidencia. \\
 02\_evaluacion.ipynb & Comprueba el formato de entrega.json y mide su precisión sobre los datos de prueba o, en su ausencia, sobre la partición de validación. \\
 prueba\_busqueda\_simulada.py & Ejecuta las funciones del notebook de búsqueda contra un oráculo sintético y verifica las propiedades de la sección~\ref{sec:propiedades}. \\
+comparar\_poda\_sintetica.py & Ejecuta la misma búsqueda con la poda activada y desactivada sobre 50 configuraciones óptimas sintéticas y resume las consultas de cada variante. \\
+grafica\_ahorro\_poda.py & Dibuja resultados/ahorro\_poda.png con las configuraciones evaluadas con y sin poda en los tres escenarios del informe. \\
+datos\_visibles\_100.json & Datos de prueba propios del grupo, con el formato de datos\_visibles.json (sección~\ref{sec:datospropios}). \\
 \bottomrule
 \end{tabularx}
 \end{table}
@@ -543,7 +552,7 @@ poda ranura=o: derrotada en k contextos, pérdida neta x\dots & Se descartó la 
 fin pasada p (reinicio r) & Precisión y configuración vigente al terminar la pasada \\
 Resultado(precision=\dots, fallos=f/n) & Representación de un resultado del oráculo \\
 validación: p (87 inst) & Precisión en la partición de validación seguida de las familias que más fallaron \\
-consultas que habría hecho el ascenso sin poda & Cota de consultas sin poda para el mismo número de pasadas, para comparar con las realizadas \\
+consultas que habría hecho el ascenso sin poda & Cota superior para el mismo número de pasadas: cuenta la opción vigente en cada paso y no descuenta las configuraciones repetidas. El ahorro real se mide con configuraciones distintas (sección~\ref{sec:conpoda}) \\
 entrega.json & Configuración final: grupo, semana, índices de las cinco ranuras y temperatura \\
 \bottomrule
 \end{tabularx}
@@ -583,6 +592,30 @@ Las consultas no superan 363 & Proposición~\ref{prop:cota} & Correcta \\
 
 En la ejecución de la prueba, la búsqueda realizó 89 consultas y 16 podas, frente a la cota de 363 consultas sin poda. El programa termina con código 0 si todas las comprobaciones se cumplen y con código 1 en caso contrario.
 
+\subsection{Comparación con y sin poda}\label{sec:conpoda}
+El archivo pruebas/comparar\_poda\_sintetica.py ejecuta el mismo código sobre 50 configuraciones óptimas elegidas con la semilla 2026, una vez con la poda activada y otra con un umbral de poda inalcanzable, que equivale a no podar. Se ejecuta con python pruebas/comparar\_poda\_sintetica.py y debe imprimir los valores de la tabla~\ref{tab:conpoda}.
+
+\begin{table}[H]
+\caption{Consultas al oráculo sintético con y sin poda (50 configuraciones óptimas).}\label{tab:conpoda}
+\begin{tabularx}{\textwidth}{@{}Lp{4.2cm}p{3cm}@{}}
+\toprule
+Variante & Consultas: media (mínimo--máximo) & Encuentra el óptimo \\
+\midrule
+Sin poda, 2 reinicios & 90.0 (78--92) & 50 de 50 \\
+Con poda, 2 reinicios & 76.4 (72--78) & 50 de 50 \\
+Sin poda, 3 reinicios & 116.6 (106--120) & 50 de 50 \\
+Con poda, 3 reinicios & 89.4 (84--92) & 50 de 50 \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+Con los mismos reinicios, la poda reduce las consultas entre un 15\,\% y un 23\,\% sin perder el óptimo. En este oráculo cada ranura afecta a las instancias de forma independiente, así que la prueba comprueba la corrección y el ahorro de la poda, no la calidad de la solución en el problema real. El informe compara además las dos versiones sobre los datos del curso y sobre los datos propios. El archivo pruebas/grafica\_ahorro\_poda.py resume los tres escenarios en resultados/ahorro\_poda.png.
+
+\subsection{Datos de prueba propios}\label{sec:datospropios}
+La carpeta datos de prueba contiene datos\_visibles\_100.json, un conjunto de 100 instancias construido por el grupo con el formato de la sección~\ref{sec:instancia}: 40 de búsqueda, 25 de validación y 35 descartadas, con 45 preguntas propias y restricciones de 26 familias de IFEvalG. Sus instancias tienen menos restricciones que las del curso (1.68 en promedio en búsqueda, frente a 2.45), por lo que sus precisiones son más altas y no se comparan con las de datos\_visibles.json.
+
+Este archivo también sirve para probar el camino que seguirá la docente con sus datos privados: se copia con el nombre datos\_prueba.json en el panel de archivos de Colab (/content) y se ejecuta 02\_evaluacion.ipynb desde la sección 2. El notebook debe informar /content/datos\_prueba.json como origen y evaluar 65 instancias, porque omite las marcadas como descartadas.
+
 \subsection{Prueba mínima con el modelo}
 Para comprobar la instalación sin ejecutar la búsqueda completa, después de la sección 2 del notebook de búsqueda se puede evaluar una configuración sobre cinco instancias:
 \begin{center}
@@ -592,6 +625,8 @@ El resultado es correcto si r.n es 5, r.precision está en $[0,1]$, el número d
 
 \subsection{Reproducibilidad de los resultados}
 La configuración de entrega.json debe coincidir con la mejor configuración del notebook de búsqueda ejecutado y con el campo mejor\_config de registro\_busqueda.json. La precisión de búsqueda puede recalcularse a partir de evaluaciones.csv, y la caché comprimida permite repetir el análisis de trazas sin GPU.
+
+La ejecución entregada debe reproducir estos valores: configuración rol~=~1, estrategia~=~2, formato~=~3, estilo~=~5, cierre~=~1 y temperatura~0.0; precisión de búsqueda 18.00\,\% (18 de 100); precisión de validación 12.64\,\% (11 de 87); 140 configuraciones evaluadas y 20 opciones podadas. El notebook de evaluación, sin datos\_prueba.json, debe obtener la misma precisión de validación.
 
 % ---------------------------------------------------------------- 9
 \section{Supuestos, limitaciones y trabajo pendiente}
@@ -611,6 +646,7 @@ La configuración de entrega.json debe coincidir con la mejor configuración del
 \item Una ejecución completa toma varias horas en una T4 gratuita y puede verse interrumpida por desconexiones de Colab.
 \item Si los datos de prueba incluyen familias que no están en IFEvalG, el oráculo lanza KeyError salvo que se le pasen registros adicionales mediante el parámetro registros de Oraculo.
 \item Si una instancia no trae el campo restriccion, la opción de cierre que repite las restricciones no agrega texto al prompt.
+\item El notebook de evaluación busca también /content/drive/MyDrive/datos\_prueba.json, pero no monta Google Drive; esa ruta solo se usa si Drive se montó antes en la sesión. Las rutas /content/datos\_prueba.json y ORACULO\_DATOS no tienen esa restricción.
 \end{itemize}
 
 \subsection{Componentes no desarrollados}\label{sec:pendiente}
